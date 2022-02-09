@@ -1,11 +1,12 @@
-package junitparams;
+package junitparams.file;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
+import junitparams.FileParameters;
+import junitparams.JUnitParamsRunner;
 import junitparams.mappers.CsvWithHeaderMapper;
 import junitparams.usage.person_example.PersonMapper;
 import junitparams.usage.person_example.PersonTest.Person;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,7 +15,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.Scanner;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(JUnitParamsRunner.class)
 public class FileParamsTest {
